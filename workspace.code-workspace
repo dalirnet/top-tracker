@@ -1,0 +1,26 @@
+{
+    "folders": [
+        {
+            "path": "lib",
+            "name": "Lib"
+        },
+        {
+            "path": "endpoints",
+            "name": "Endpoints"
+        },
+        {
+            "path": "test",
+            "name": "Test"
+        },
+        {
+            "path": ".",
+            "name": "TopTracker"
+        }
+    ],
+    "settings": {
+        "files.exclude": {
+            "**/.git": true,
+            "**/node_modules": true
+        }
+    }
+}

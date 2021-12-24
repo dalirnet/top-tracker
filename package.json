@@ -1,0 +1,21 @@
+{
+    "name": "top-tracker",
+    "version": "1.0.0",
+    "description": "Toptal tracker js client",
+    "main": "index.js",
+    "repository": "https://github.com/dalirnet/top-tracker.git",
+    "author": "AmirRezaDalir",
+    "license": "MIT",
+    "type": "module",
+    "scripts": {
+        "test": "jest"
+    },
+    "dependencies": {
+        "jest": "^27.4.5",
+        "superagent": "^6.1.0"
+    },
+    "devDependencies": {
+        "lodash": "^4.17.21",
+        "@babel/plugin-transform-modules-commonjs": "^7.16.5"
+    }
+}

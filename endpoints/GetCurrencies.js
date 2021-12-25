@@ -3,10 +3,6 @@ class GetCurrencies extends Api {
     static METHOD = 'GET'
     static ENDPOINT = '/payments/currencies'
 
-    constructor() {
-        super(GetCurrencies.METHOD, GetCurrencies.ENDPOINT)
-    }
-
     call() {
         return super.call().then(({ currencies }) => {
             return currencies

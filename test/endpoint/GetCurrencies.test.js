@@ -1,11 +1,23 @@
 import _ from 'lodash'
 import TopTracker from '../../index.js'
 
-describe('GetCurrencies', () => {
-    test('First currency name is "US Dollar"', () => {
-        return new TopTracker.GetCurrencies().call().then((currencies) => {
-            const firstCurrency = _.get(_.find(currencies, ['id', 1]), 'name')
-            expect(firstCurrency).toBe('US Dollar')
+beforeAll(() => {
+    return MEMO.req(new TopTracker.GetCurrencies())
+        .call()
+        .then((currencies) => {
+            MEMO.set(currencies)
         })
-    })
+})
+
+test('typeof output', () => {
+    expect(TopTracker.GetCurrencies.outputType(MEMO.get())).toBeTruthy()
+})
+
+test('first currency name', () => {
+    const firstCurrency = _.get(_.find(MEMO.get(), ['id', 1]), 'name')
+    expect(firstCurrency).toBe('US Dollar')
+})
+
+afterAll(() => {
+    MEMO.save()
 })

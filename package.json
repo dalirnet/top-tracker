@@ -11,11 +11,12 @@
         "test": "jest"
     },
     "dependencies": {
+        "fs-extra": "^10.0.0",
         "jest": "^27.4.5",
         "superagent": "^6.1.0"
     },
     "devDependencies": {
-        "lodash": "^4.17.21",
-        "@babel/plugin-transform-modules-commonjs": "^7.16.5"
+        "@babel/plugin-transform-modules-commonjs": "^7.16.5",
+        "lodash": "^4.17.21"
     }
 }

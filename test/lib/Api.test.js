@@ -1,20 +1,20 @@
 import Api from '../../lib/Api.js'
 
-test('extract parameters from endpoint', () => {
-    const parameters = new Api().extractParametersFromEndpoint('/endpoint/:path/:other_path')
+test('extract endpoint parameters', () => {
+    const parameters = new Api().extractEndpointParameters('/endpoint/:path/:other_path')
     expect(parameters).toMatchObject({
         ':path': 'path',
         ':other_path': 'otherPath',
     })
 })
-test('fill endpoint parameters', () => {
+test('init endpoint parameters', () => {
     const endpoint = '/endpoint/:path/:other_path'
     const finalEndpoint = '/endpoint/valueOfPath/valueOfOtherPath'
-    const testOne = new Api().fillEndpointParameters(endpoint, {
+    const testOne = new Api().initEndpoint(endpoint, {
         path: 'valueOfPath',
         other_path: 'valueOfOtherPath',
     })
-    const testTwo = new Api().fillEndpointParameters(endpoint, {
+    const testTwo = new Api().initEndpoint(endpoint, {
         path: 'valueOfPath',
         otherPath: 'valueOfOtherPath',
     })

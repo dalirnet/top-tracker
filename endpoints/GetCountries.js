@@ -1,17 +1,11 @@
 import Api from '../lib/Api.js'
-
 class GetCountries extends Api {
-    static method = 'GET'
-    static endpoint = '/countries'
+    static METHOD = 'GET'
+    static ENDPOINT = '/countries'
+    static OUTPUT = [{ id: Number, name: String }]
 
-    constructor(parameters = {}) {
-        super(GetCountries.endpoint, GetCountries.method, parameters)
-    }
-
-    call(body = {}) {
-        return super.call(body).then((json) => {
-            return json
-        })
+    constructor() {
+        super(GetCountries.METHOD, GetCountries.ENDPOINT)
     }
 }
 

@@ -1,11 +1,10 @@
 import Api from '../lib/Api.js'
-
 class GetCurrencies extends Api {
-    static method = 'GET'
-    static endpoint = '/payments/currencies'
+    static METHOD = 'GET'
+    static ENDPOINT = '/payments/currencies'
 
     constructor() {
-        super(GetCurrencies.endpoint, GetCurrencies.method)
+        super(GetCurrencies.METHOD, GetCurrencies.ENDPOINT)
     }
 
     call() {

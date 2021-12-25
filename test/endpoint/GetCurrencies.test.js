@@ -9,13 +9,13 @@ beforeAll(() => {
         })
 })
 
-test('typeof output', () => {
-    expect(TopTracker.GetCurrencies.outputType(MEMO.get())).toBeTruthy()
+test('output match', () => {
+    expect(TopTracker.GetCurrencies.outputMatch(MEMO.get())).toBeTruthy()
 })
 
-test('first currency name', () => {
-    const firstCurrency = _.get(_.find(MEMO.get(), ['id', 1]), 'name')
-    expect(firstCurrency).toBe('US Dollar')
+test('first currency', () => {
+    const firstCurrency = _.find(MEMO.get(), ['id', 1])
+    expect(firstCurrency).toMatchObject({ id: 1, name: 'US Dollar', code: 'USD', symbol: '$' })
 })
 
 afterAll(() => {

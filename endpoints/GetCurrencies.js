@@ -2,7 +2,14 @@ import Api from '../lib/Api.js'
 class GetCurrencies extends Api {
     static METHOD = 'GET'
     static ENDPOINT = '/payments/currencies'
-    static OUTPUT = [{ id: Number, name: String }]
+    static OUTPUT = [
+        {
+            id: 'isNumber',
+            name: 'isString',
+            code: 'isString',
+            symbol: 'isString',
+        },
+    ]
 
     call() {
         return super.call().then(({ currencies }) => {

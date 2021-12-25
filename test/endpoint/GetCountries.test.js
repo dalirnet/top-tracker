@@ -9,13 +9,13 @@ beforeAll(() => {
         })
 })
 
-test('typeof output', () => {
-    expect(TopTracker.GetCountries.outputType(MEMO.get())).toBeTruthy()
+test('output match', () => {
+    expect(TopTracker.GetCountries.outputMatch(MEMO.get())).toBeTruthy()
 })
 
-test('first country name', () => {
-    const firstCountry = _.get(_.find(MEMO.get(), ['id', 1]), 'name')
-    expect(firstCountry).toBe('Afghanistan')
+test('first country', () => {
+    const firstCountry = _.find(MEMO.get(), ['id', 1])
+    expect(firstCountry).toMatchObject({ id: 1, name: 'Afghanistan' })
 })
 
 afterAll(() => {

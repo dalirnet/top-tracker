@@ -27,7 +27,7 @@ const get = () => {
 
 const save = () => {
     fs.ensureFile(path()).then(() => {
-        fs.writeJson(path(), memo.output).catch(({ message }) => {
+        fs.writeJson(path(), memo.output, { spaces: 4 }).catch(({ message }) => {
             console.log(message)
         })
     })

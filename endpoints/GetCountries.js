@@ -1,4 +1,5 @@
 import Api from '../lib/Api.js'
+
 class GetCountries extends Api {
     static METHOD = 'GET'
     static ENDPOINT = '/countries'

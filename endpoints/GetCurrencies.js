@@ -4,7 +4,6 @@ class GetCurrencies extends Api {
     static METHOD = 'GET'
     static ENDPOINT = '/payments/currencies'
     static DESC = 'Get currencies list'
-    static INPUT = { id: 'isNumber' }
     static OUTPUT = [
         {
             id: 'isNumber',

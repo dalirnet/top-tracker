@@ -18,21 +18,14 @@ new GetCurrencies(parameters)
 
 -   **Parameters**
 
-```json
+```js
 /* whitout parameters */
 ```
 
 -   **Input**
 
 ```js
-new GetCurrencies().call(input)
-```
-
-```json
-/* input */
-{
-    "id": "isNumber"
-}
+/* whitout input */
 ```
 
 -   **Output**
@@ -42,7 +35,6 @@ new GetCurrencies().call().then((output) => {})
 ```
 
 ```json
-/* output */
 [
     {
         "id": "isNumber",

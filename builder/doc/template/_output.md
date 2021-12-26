@@ -7,14 +7,13 @@ new {{class}}().call().then((output) => {})
 ```
 
 ```json
-/* output */
 {{{.}}}
 ```
 
 {{/output}}
 {{^output}}
 
-```json
+```js
 /* whitout output */
 ```
 

@@ -7,14 +7,13 @@ new {{class}}().call(input)
 ```
 
 ```json
-/* input */
 {{{.}}}
 ```
 
 {{/input}}
 {{^input}}
 
-```json
+```js
 /* whitout input */
 ```
 

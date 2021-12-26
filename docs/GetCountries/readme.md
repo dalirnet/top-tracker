@@ -19,19 +19,12 @@ new GetCountries(parameters)
 -   **Parameters**
 
 ```js
-new GetCountries(parameters)
-```
-
-```json
-/* parameters */
-{
-    "name": "isString"
-}
+/* whitout parameters */
 ```
 
 -   **Input**
 
-```json
+```js
 /* whitout input */
 ```
 
@@ -42,7 +35,6 @@ new GetCountries().call().then((output) => {})
 ```
 
 ```json
-/* output */
 [
     {
         "id": "isNumber",

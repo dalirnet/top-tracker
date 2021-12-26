@@ -7,14 +7,13 @@ new {{class}}(parameters)
 ```
 
 ```json
-/* parameters */
 {{{.}}}
 ```
 
 {{/parameters}}
 {{^parameters}}
 
-```json
+```js
 /* whitout parameters */
 ```
 

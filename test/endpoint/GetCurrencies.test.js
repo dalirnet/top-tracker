@@ -1,8 +1,8 @@
 import _ from 'lodash'
-import topTracker from '../../index.js'
+import { GetCurrencies } from '../../index.js'
 
 beforeAll(() => {
-    return MEMO.req(new topTracker.GetCurrencies())
+    return MEMO.req(new GetCurrencies())
         .call()
         .then((currencies) => {
             MEMO.set(currencies)
@@ -10,7 +10,7 @@ beforeAll(() => {
 })
 
 test('output match', () => {
-    expect(topTracker.GetCurrencies.outputMatch(MEMO.get())).toBeTruthy()
+    expect(GetCurrencies.outputMatch(MEMO.get())).toBeTruthy()
 })
 
 test('first currency', () => {

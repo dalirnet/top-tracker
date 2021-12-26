@@ -7,8 +7,9 @@ import InvoiceConfirm from './src/endpoints/InvoiceConfirm.js'
 import InvoiceDetails from './src/endpoints/InvoiceDetails.js'
 import InvoiceSummary from './src/endpoints/InvoiceDetails.js'
 import SignIn from './src/endpoints/SignIn.js'
+import SignUp from './src/endpoints/SignUp.js'
 
-export { Countries, Currencies, TimeZones, UsersLocation, Invitation, InvoiceConfirm, InvoiceDetails, InvoiceSummary, SignIn }
+export { Countries, Currencies, TimeZones, UsersLocation, Invitation, InvoiceConfirm, InvoiceDetails, InvoiceSummary, SignIn, SignUp }
 
 export default {
     Countries,
@@ -20,4 +21,5 @@ export default {
     InvoiceDetails,
     InvoiceSummary,
     SignIn,
+    SignUp,
 }

@@ -1,16 +1,16 @@
-# Sign In
+# Sign Up
 
-Signin and get session
+Signup and get session
 
 #### Sample
 
 ```js
-import { SignIn } from 'top-tracker'
+import { SignUp } from 'top-tracker'
 
 const parameters = {}
 const input = {}
 
-new SignIn(parameters)
+new SignUp(parameters)
     .call(input)
     .then((output) => {})
     .catch(({ message, payload }) => {})
@@ -26,10 +26,15 @@ new SignIn(parameters)
 
 ```json
 {
+    "first_name": "isString",
+    "last_name": "isString",
+    "country_id": "isNumber",
+    "city": "isString",
     "email": "isString",
     "password": "isString",
-    "remember_me": "isBoolean",
-    "profile": "isString"
+    "company_name": "isString",
+    "time_zone": "isString",
+    "type": "isString"
 }
 ```
 

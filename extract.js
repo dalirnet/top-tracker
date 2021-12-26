@@ -1,19 +1,4 @@
 // post
-post('/sessions', {
-    email: 'string',
-    password: 'string',
-    remember_me: 'boolean',
-    profile: 'string',
-})
-
-post('/users', {
-    first_name: 'string',
-    last_name: 'string',
-    country_id: 'number',
-    city: 'string',
-    email: 'string',
-    password: 'string',
-})
 
 // signedDelete
 signedDelete('/sessions/me')

@@ -38,6 +38,8 @@ new SignIn(parameters)
 
 -   [SignIn](./docs/SignIn/readme.md)
 
+-   [SignUp](./docs/SignUp/readme.md)
+
 -   UsersLocation `todo`
 
 -   Invitation `todo`

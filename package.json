@@ -12,11 +12,12 @@
         "test": "jest"
     },
     "dependencies": {
-        "superagent": "^6.1.0",
-        "lodash": "^4.17.21"
+        "lodash": "^4.17.21",
+        "superagent": "^6.1.0"
     },
     "devDependencies": {
         "@babel/plugin-transform-modules-commonjs": "^7.16.5",
+        "casual": "^1.6.2",
         "dotenv": "^10.0.0",
         "fs-extra": "^10.0.0",
         "jest": "^27.4.5",

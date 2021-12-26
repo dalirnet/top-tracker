@@ -30,10 +30,6 @@ new Countries(parameters)
 
 -   **Output**
 
-```js
-new Countries().call().then((output) => {})
-```
-
 ```json
 [
     {

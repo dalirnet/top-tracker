@@ -2,10 +2,6 @@
 
 {{#parameters}}
 
-```js
-new {{class}}(parameters)
-```
-
 ```json
 {{{.}}}
 ```

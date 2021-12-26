@@ -2,10 +2,6 @@
 
 {{#input}}
 
-```js
-new {{class}}().call(input)
-```
-
 ```json
 {{{.}}}
 ```

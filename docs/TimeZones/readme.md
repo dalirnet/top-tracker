@@ -30,10 +30,6 @@ new TimeZones(parameters)
 
 -   **Output**
 
-```js
-new TimeZones().call().then((output) => {})
-```
-
 ```json
 [
     {

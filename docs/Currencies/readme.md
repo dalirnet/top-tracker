@@ -30,10 +30,6 @@ new Currencies(parameters)
 
 -   **Output**
 
-```js
-new Currencies().call().then((output) => {})
-```
-
 ```json
 [
     {

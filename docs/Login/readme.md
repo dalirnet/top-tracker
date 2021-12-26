@@ -24,10 +24,6 @@ new Login(parameters)
 
 -   **Input**
 
-```js
-new Login().call(input)
-```
-
 ```json
 {
     "email": "isString",
@@ -38,10 +34,6 @@ new Login().call(input)
 ```
 
 -   **Output**
-
-```js
-new Login().call().then((output) => {})
-```
 
 ```json
 {

@@ -1,16 +1,16 @@
-# Login
+# Sign In
 
-Login and get session
+SignIn and get session
 
 #### Sample
 
 ```js
-import { Login } from 'top-tracker'
+import { SignIn } from 'top-tracker'
 
 const parameters = {}
 const input = {}
 
-new Login(parameters)
+new SignIn(parameters)
     .call(input)
     .then((output) => {})
     .catch(({ message, payload }) => {})

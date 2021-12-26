@@ -1,8 +1,8 @@
 import _ from 'lodash'
-import { Login } from '../../index.js'
+import { SignIn } from '../../index.js'
 
 beforeAll(() => {
-    return MEMO.req(new Login())
+    return MEMO.req(new SignIn())
         .call({
             email: process.env.TEST_EMAIL,
             password: process.env.TEST_PASSWORD,
@@ -13,7 +13,7 @@ beforeAll(() => {
 })
 
 test('output match', () => {
-    expect(Login.outputMatch(MEMO.get())).toBeTruthy()
+    expect(SignIn.outputMatch(MEMO.get())).toBeTruthy()
 })
 
 afterAll(() => {

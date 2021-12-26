@@ -1,9 +1,9 @@
 import Api from '../lib/Api.js'
 
-class Login extends Api {
+class SignIn extends Api {
     static METHOD = 'POST'
     static ENDPOINT = '/sessions'
-    static DESC = 'Login and get session'
+    static DESC = 'SignIn and get session'
     static INPUT = {
         email: 'isString',
         password: 'isString',
@@ -46,4 +46,4 @@ class Login extends Api {
     }
 }
 
-export default Login
+export default SignIn

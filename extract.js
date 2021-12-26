@@ -5,7 +5,7 @@
 // get('/users/location')
 // get(`/invitations/${token}`)
 // get(`/payments/invoices/${token}/confirm`)
-get(`/payments/invoices/details/${invoice_uuid}`)
+// get(`/payments/invoices/details/${invoice_uuid}`)
 get(`/payments/invoices/summary/${invoice_uuid}`)
 
 // post

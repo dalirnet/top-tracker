@@ -1,6 +1,6 @@
 # Time Zones
 
-Get time zones list
+Get time zones
 
 #### Sample
 

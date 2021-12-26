@@ -42,3 +42,7 @@ new (parameters)
 
 -   InvoiceConfirm `todo`
 
+-   InvoiceDetails `todo`
+
+-   InvoiceSummary `todo`
+

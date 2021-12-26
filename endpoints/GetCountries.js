@@ -2,7 +2,9 @@ import Api from '../lib/Api.js'
 
 class GetCountries extends Api {
     static METHOD = 'GET'
-    static ENDPOINT = '/countries'
+    static ENDPOINT = '/countries/:name'
+    static DESC = 'Get countries list'
+    static INPUT = undefined
     static OUTPUT = [
         {
             id: 'isNumber',

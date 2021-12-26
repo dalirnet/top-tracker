@@ -13,6 +13,10 @@
             "name": "Test"
         },
         {
+            "path": "docs",
+            "name": "Docs"
+        },
+        {
             "path": ".",
             "name": "TopTracker"
         }

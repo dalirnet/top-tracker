@@ -1,8 +1,8 @@
 import _ from 'lodash'
-import TopTracker from '../../index.js'
+import topTracker from '../../index.js'
 
 beforeAll(() => {
-    return MEMO.req(new TopTracker.GetCountries())
+    return MEMO.req(new topTracker.GetCountries())
         .call()
         .then((countries) => {
             MEMO.set(countries)
@@ -10,7 +10,7 @@ beforeAll(() => {
 })
 
 test('output match', () => {
-    expect(TopTracker.GetCountries.outputMatch(MEMO.get())).toBeTruthy()
+    expect(topTracker.GetCountries.outputMatch(MEMO.get())).toBeTruthy()
 })
 
 test('first country', () => {

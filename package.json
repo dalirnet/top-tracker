@@ -8,12 +8,13 @@
     "license": "MIT",
     "type": "module",
     "scripts": {
+        "doc": " node ./builder/doc/index.js",
         "test": "jest"
     },
     "dependencies": {
-        "flat": "^5.0.2",
         "fs-extra": "^10.0.0",
         "jest": "^27.4.5",
+        "mustache": "^4.2.0",
         "superagent": "^6.1.0"
     },
     "devDependencies": {

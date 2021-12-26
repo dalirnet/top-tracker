@@ -13,9 +13,14 @@ test('output match', () => {
     expect(GetCurrencies.outputMatch(MEMO.get())).toBeTruthy()
 })
 
-test('first currency', () => {
-    const firstCurrency = _.find(MEMO.get(), ['id', 1])
-    expect(firstCurrency).toMatchObject({ id: 1, name: 'US Dollar', code: 'USD', symbol: '$' })
+test('currency by id 1', () => {
+    const currency = _.find(MEMO.get(), ['id', 1])
+    expect(currency).toMatchObject({
+        id: 1,
+        name: 'US Dollar',
+        code: 'USD',
+        symbol: '$',
+    })
 })
 
 afterAll(() => {

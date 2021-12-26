@@ -17,6 +17,10 @@
             "name": "Docs"
         },
         {
+            "path": "test/memo",
+            "name": "Memo"
+        },
+        {
             "path": ".",
             "name": "TopTracker"
         }

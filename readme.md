@@ -34,3 +34,7 @@ new GetCountries(parameters)
 
 -   [Get Currencies](./docs/GetCurrencies/readme.md)
 
+-   [Time Zones](./docs/TimeZones/readme.md)
+
+-   [Users Location](./docs/UsersLocation/readme.md)
+

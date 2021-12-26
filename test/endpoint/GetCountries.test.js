@@ -13,9 +13,12 @@ test('output match', () => {
     expect(GetCountries.outputMatch(MEMO.get())).toBeTruthy()
 })
 
-test('first country', () => {
-    const firstCountry = _.find(MEMO.get(), ['id', 1])
-    expect(firstCountry).toMatchObject({ id: 1, name: 'Afghanistan' })
+test('country by id 1', () => {
+    const country = _.find(MEMO.get(), ['id', 1])
+    expect(country).toMatchObject({
+        id: 1,
+        name: 'Afghanistan',
+    })
 })
 
 afterAll(() => {

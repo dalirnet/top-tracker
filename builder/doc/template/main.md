@@ -8,4 +8,4 @@ JavaScript client for **[Toptal](https://www.toptal.com/)** [tracker](https://ww
 
 {{> sample}}
 
-{{> methods}}
+{{> endpoints}}

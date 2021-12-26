@@ -1,16 +1,16 @@
-# Time Zones
+# Get Time Zones
 
 Get time zones list
 
 #### Sample
 
 ```js
-import { TimeZones } from 'top-tracker'
+import { GetTimeZones } from 'top-tracker'
 
 const parameters = {}
 const input = {}
 
-new TimeZones(parameters)
+new GetTimeZones(parameters)
     .call(input)
     .then((output) => {})
     .catch((error) => {})
@@ -31,7 +31,7 @@ new TimeZones(parameters)
 -   **Output**
 
 ```js
-new TimeZones().call().then((output) => {})
+new GetTimeZones().call().then((output) => {})
 ```
 
 ```json

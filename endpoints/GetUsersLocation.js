@@ -1,6 +1,7 @@
 import Api from '../lib/Api.js'
 
-class UsersLocation extends Api {
+class GetUsersLocation extends Api {
+    static TODO = true
     static METHOD = 'GET'
     static ENDPOINT = '/users/location'
     static DESC = 'Get users location'
@@ -14,4 +15,4 @@ class UsersLocation extends Api {
     }
 }
 
-export default UsersLocation
+export default GetUsersLocation

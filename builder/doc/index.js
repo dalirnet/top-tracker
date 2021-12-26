@@ -15,7 +15,7 @@ const mustachePartials = {
     output: _.toString(fs.readFileSync('./builder/doc/template/_output.md')),
     install: _.toString(fs.readFileSync('./builder/doc/template/_install.md')),
     import: _.toString(fs.readFileSync('./builder/doc/template/_import.md')),
-    methods: _.toString(fs.readFileSync('./builder/doc/template/_methods.md')),
+    endpoints: _.toString(fs.readFileSync('./builder/doc/template/_endpoints.md')),
 }
 
 const saveDocFile = (path, context) => {
@@ -36,21 +36,42 @@ const initView = (value, key) => {
         class: key,
         title: _.startCase(key),
         description: value.DESC,
+        todo: value.TODO,
         parameters: _.isEmpty(parameters) ? undefined : JSON.stringify(parameters, null, 4),
         input: _.isEmpty(value.INPUT) ? undefined : JSON.stringify(value.INPUT, null, 4),
         output: _.isEmpty(value.OUTPUT) ? undefined : JSON.stringify(value.OUTPUT, null, 4),
     }
 }
 
-const methods = _.reduce(
-    topTracker,
-    (methods, value, key) => {
-        methods.push(initView(value, key))
-        saveDocFile(`./docs/${key}/readme.md`, mustache.render(mustacheTemplate.endpoint, _.last(methods), mustachePartials))
+fs.emptyDirSync('./docs/')
 
-        return methods
-    },
-    []
+const endpoints = _.sortBy(
+    _.reduce(
+        topTracker,
+        (endpoints, value, key) => {
+            const view = initView(value, key)
+            if (!view.todo) {
+                saveDocFile(`./docs/${key}/readme.md`, mustache.render(mustacheTemplate.endpoint, view, mustachePartials))
+            }
+            endpoints.push(view)
+
+            return endpoints
+        },
+        []
+    ),
+    (endpoint) => {
+        return endpoint.class && endpoint.todo
+    }
 )
 
-saveDocFile('./readme.md', mustache.render(mustacheTemplate.main, { methods, ..._.head(methods) }, mustachePartials))
+saveDocFile(
+    './readme.md',
+    mustache.render(
+        mustacheTemplate.main,
+        {
+            endpoints,
+            ..._.find(endpoints, ['class', 'GetCountries']),
+        },
+        mustachePartials
+    )
+)

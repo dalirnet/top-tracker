@@ -28,13 +28,15 @@ new GetCountries(parameters)
     .catch((error) => {})
 ```
 
-### Methods
+### Endpoints
 
--   [Get Countries](./docs/GetCountries/readme.md)
+-   [GetCountries](./docs/GetCountries/readme.md)
 
--   [Get Currencies](./docs/GetCurrencies/readme.md)
+-   [GetCurrencies](./docs/GetCurrencies/readme.md)
 
--   [Time Zones](./docs/TimeZones/readme.md)
+-   [GetTimeZones](./docs/GetTimeZones/readme.md)
 
--   [Users Location](./docs/UsersLocation/readme.md)
+-   GetUsersLocation `todo`
+
+-   GetInvitation `todo`
 

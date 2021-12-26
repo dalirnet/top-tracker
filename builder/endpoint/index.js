@@ -33,5 +33,12 @@ fs.appendFileSync(testPath, mustache.render(mustacheTemplate.test, mustacheView)
 console.log(figures.tick, 'Build', testPath)
 
 const indexPath = './index.js'
-fs.appendFileSync(indexPath, mustache.render(mustacheTemplate.export, mustacheView))
-console.log(figures.tick, 'Append', indexPath)
+fs.writeFileSync(
+    indexPath,
+    mustache.render(mustacheTemplate.export, {
+        class: _.sortBy([..._.keys(topTracker), mustacheView.class], (value) => value),
+    })
+)
+console.log(figures.tick, 'Build', indexPath)
+
+console.log(figures.tick, 'Done')

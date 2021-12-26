@@ -1,1 +1,3 @@
-export { default as {{class}} } from './src/endpoints/{{class}}.js'
+{{#class}}
+export { default as {{.}} } from './src/endpoints/{{.}}.js'
+{{/class}}

@@ -1,8 +1,8 @@
 import _ from 'lodash'
-import { GetTimeZones } from '../../index.js'
+import { TimeZones } from '../../index.js'
 
 beforeAll(() => {
-    return MEMO.req(new GetTimeZones())
+    return MEMO.req(new TimeZones())
         .call()
         .then((timeZones) => {
             MEMO.set(timeZones)
@@ -10,7 +10,7 @@ beforeAll(() => {
 })
 
 test('output match', () => {
-    expect(GetTimeZones.outputMatch(MEMO.get())).toBeTruthy()
+    expect(TimeZones.outputMatch(MEMO.get())).toBeTruthy()
 })
 
 test('timezone by value Pacific/Kiritimati', () => {

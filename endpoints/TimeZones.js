@@ -1,9 +1,9 @@
 import Api from '../lib/Api.js'
 
-class GetTimeZones extends Api {
+class TimeZones extends Api {
     static METHOD = 'GET'
     static ENDPOINT = '/time_zones'
-    static DESC = 'Get time zones list'
+    static DESC = 'Get time zones'
     static OUTPUT = [
         {
             value: 'isString',
@@ -12,4 +12,4 @@ class GetTimeZones extends Api {
     ]
 }
 
-export default GetTimeZones
+export default TimeZones

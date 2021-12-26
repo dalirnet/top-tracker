@@ -1,15 +1,17 @@
-import GetCountries from './endpoints/getCountries.js'
-import GetCurrencies from './endpoints/GetCurrencies.js'
-import GetTimeZones from './endpoints/GetTimeZones.js'
-import GetUsersLocation from './endpoints/GetUsersLocation.js'
-import GetInvitation from './endpoints/GetInvitation.js'
+import Countries from './endpoints/Countries.js'
+import Currencies from './endpoints/Currencies.js'
+import TimeZones from './endpoints/TimeZones.js'
+import UsersLocation from './endpoints/UsersLocation.js'
+import Invitation from './endpoints/Invitation.js'
+import InvoiceConfirm from './endpoints/InvoiceConfirm.js'
 
-export { GetCountries, GetCurrencies, GetTimeZones, GetUsersLocation, GetInvitation }
+export { Countries, Currencies, TimeZones, UsersLocation, Invitation, InvoiceConfirm }
 
 export default {
-    GetCountries,
-    GetCurrencies,
-    GetTimeZones,
-    GetUsersLocation,
-    GetInvitation,
+    Countries,
+    Currencies,
+    TimeZones,
+    UsersLocation,
+    Invitation,
+    InvoiceConfirm,
 }

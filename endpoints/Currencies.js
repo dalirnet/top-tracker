@@ -1,9 +1,9 @@
 import Api from '../lib/Api.js'
 
-class GetCurrencies extends Api {
+class Currencies extends Api {
     static METHOD = 'GET'
     static ENDPOINT = '/payments/currencies'
-    static DESC = 'Get currencies list'
+    static DESC = 'Get currencies'
     static OUTPUT = [
         {
             id: 'isNumber',
@@ -20,4 +20,4 @@ class GetCurrencies extends Api {
     }
 }
 
-export default GetCurrencies
+export default Currencies

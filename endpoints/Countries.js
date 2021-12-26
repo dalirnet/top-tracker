@@ -1,9 +1,9 @@
 import Api from '../lib/Api.js'
 
-class GetCountries extends Api {
+class Countries extends Api {
     static METHOD = 'GET'
     static ENDPOINT = '/countries'
-    static DESC = 'Get countries list'
+    static DESC = 'Get countries'
     static OUTPUT = [
         {
             id: 'isNumber',
@@ -12,4 +12,4 @@ class GetCountries extends Api {
     ]
 }
 
-export default GetCountries
+export default Countries

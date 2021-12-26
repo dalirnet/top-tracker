@@ -1,16 +1,16 @@
-# Get Time Zones
+# Currencies
 
-Get time zones list
+Get currencies
 
 #### Sample
 
 ```js
-import { GetTimeZones } from 'top-tracker'
+import { Currencies } from 'top-tracker'
 
 const parameters = {}
 const input = {}
 
-new GetTimeZones(parameters)
+new Currencies(parameters)
     .call(input)
     .then((output) => {})
     .catch((error) => {})
@@ -31,14 +31,16 @@ new GetTimeZones(parameters)
 -   **Output**
 
 ```js
-new GetTimeZones().call().then((output) => {})
+new Currencies().call().then((output) => {})
 ```
 
 ```json
 [
     {
-        "value": "isString",
-        "label": "isString"
+        "id": "isNumber",
+        "name": "isString",
+        "code": "isString",
+        "symbol": "isString"
     }
 ]
 ```

@@ -1,8 +1,8 @@
 import _ from 'lodash'
-import { GetCountries } from '../../index.js'
+import { Countries } from '../../index.js'
 
 beforeAll(() => {
-    return MEMO.req(new GetCountries())
+    return MEMO.req(new Countries())
         .call()
         .then((countries) => {
             MEMO.set(countries)
@@ -10,7 +10,7 @@ beforeAll(() => {
 })
 
 test('output match', () => {
-    expect(GetCountries.outputMatch(MEMO.get())).toBeTruthy()
+    expect(Countries.outputMatch(MEMO.get())).toBeTruthy()
 })
 
 test('country by id 1', () => {

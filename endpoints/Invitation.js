@@ -1,10 +1,10 @@
 import Api from '../lib/Api.js'
 
-class GetInvitation extends Api {
+class Invitation extends Api {
     static TODO = true
     static METHOD = 'GET'
     static ENDPOINT = '/invitations/:token'
-    static DESC = 'Get inavtion'
+    static DESC = 'Get inavtion by token'
 }
 
-export default GetInvitation
+export default Invitation

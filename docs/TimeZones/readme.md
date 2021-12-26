@@ -1,16 +1,16 @@
-# Get Countries
+# Time Zones
 
-Get countries list
+Get time zones list
 
 #### Sample
 
 ```js
-import { GetCountries } from 'top-tracker'
+import { TimeZones } from 'top-tracker'
 
 const parameters = {}
 const input = {}
 
-new GetCountries(parameters)
+new TimeZones(parameters)
     .call(input)
     .then((output) => {})
     .catch((error) => {})
@@ -31,14 +31,14 @@ new GetCountries(parameters)
 -   **Output**
 
 ```js
-new GetCountries().call().then((output) => {})
+new TimeZones().call().then((output) => {})
 ```
 
 ```json
 [
     {
-        "id": "isNumber",
-        "name": "isString"
+        "value": "isString",
+        "label": "isString"
     }
 ]
 ```

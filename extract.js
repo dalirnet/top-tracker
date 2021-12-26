@@ -3,8 +3,8 @@
 //get('/payments/currencies')
 // get('/time_zones')
 // get('/users/location')
-get(`/invitations/${token}`)
-get(`/payments/invoices/${token}/confirm`)
+// get(`/invitations/${token}`)
+// get(`/payments/invoices/${token}/confirm`)
 get(`/payments/invoices/details/${invoice_uuid}`)
 get(`/payments/invoices/summary/${invoice_uuid}`)
 

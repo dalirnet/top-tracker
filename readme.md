@@ -17,12 +17,12 @@ import topTracker from 'top-tracker'
 #### Sample
 
 ```js
-import { GetCountries } from 'top-tracker'
+import {  } from 'top-tracker'
 
 const parameters = {}
 const input = {}
 
-new GetCountries(parameters)
+new (parameters)
     .call(input)
     .then((output) => {})
     .catch((error) => {})
@@ -30,13 +30,15 @@ new GetCountries(parameters)
 
 ### Endpoints
 
--   [GetCountries](./docs/GetCountries/readme.md)
+-   [Countries](./docs/Countries/readme.md)
 
--   [GetCurrencies](./docs/GetCurrencies/readme.md)
+-   [Currencies](./docs/Currencies/readme.md)
 
--   [GetTimeZones](./docs/GetTimeZones/readme.md)
+-   [TimeZones](./docs/TimeZones/readme.md)
 
--   GetUsersLocation `todo`
+-   UsersLocation `todo`
 
--   GetInvitation `todo`
+-   Invitation `todo`
+
+-   InvoiceConfirm `todo`
 

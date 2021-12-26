@@ -1,16 +1,16 @@
-# Get Currencies
+# Countries
 
-Get currencies list
+Get countries
 
 #### Sample
 
 ```js
-import { GetCurrencies } from 'top-tracker'
+import { Countries } from 'top-tracker'
 
 const parameters = {}
 const input = {}
 
-new GetCurrencies(parameters)
+new Countries(parameters)
     .call(input)
     .then((output) => {})
     .catch((error) => {})
@@ -31,16 +31,14 @@ new GetCurrencies(parameters)
 -   **Output**
 
 ```js
-new GetCurrencies().call().then((output) => {})
+new Countries().call().then((output) => {})
 ```
 
 ```json
 [
     {
         "id": "isNumber",
-        "name": "isString",
-        "code": "isString",
-        "symbol": "isString"
+        "name": "isString"
     }
 ]
 ```

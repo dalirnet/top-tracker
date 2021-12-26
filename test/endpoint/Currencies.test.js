@@ -1,8 +1,8 @@
 import _ from 'lodash'
-import { GetCurrencies } from '../../index.js'
+import { Currencies } from '../../index.js'
 
 beforeAll(() => {
-    return MEMO.req(new GetCurrencies())
+    return MEMO.req(new Currencies())
         .call()
         .then((currencies) => {
             MEMO.set(currencies)
@@ -10,7 +10,7 @@ beforeAll(() => {
 })
 
 test('output match', () => {
-    expect(GetCurrencies.outputMatch(MEMO.get())).toBeTruthy()
+    expect(Currencies.outputMatch(MEMO.get())).toBeTruthy()
 })
 
 test('currency by id 1', () => {

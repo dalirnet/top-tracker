@@ -1,31 +1,25 @@
 # Get Countries
 
-`/countries/:name`
-
 Get countries list
 
-### Sample
+#### Sample
 
 ```js
-import topTracker from 'top-tracker'
+import { GetCountries } from 'top-tracker'
 
-/* Make instance */
-const instance = new topTracker.GetCountries()
+const parameters = {}
+const input = {}
 
-/* Make request */
-const request = instance.call()
-
-/* Get result */
-request.then((output) => {
-    /* output */
-})
+new GetCountries(parameters)
+    .call(input)
+    .then((output) => {})
+    .catch((error) => {})
 ```
 
-
-#### Parameters
+-   **Parameters**
 
 ```js
-new topTracker.GetCountries(parameters)
+new GetCountries(parameters)
 ```
 
 ```json
@@ -35,11 +29,16 @@ new topTracker.GetCountries(parameters)
 }
 ```
 
+-   **Input**
 
-#### Output
+```json
+/* whitout input */
+```
+
+-   **Output**
 
 ```js
-request.then((output) => {})
+new GetCountries().call().then((output) => {})
 ```
 
 ```json

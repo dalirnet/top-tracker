@@ -1,31 +1,31 @@
 # Get Currencies
 
-`/payments/currencies`
-
 Get currencies list
 
-### Sample
+#### Sample
 
 ```js
-import topTracker from 'top-tracker'
+import { GetCurrencies } from 'top-tracker'
 
-/* Make instance */
-const instance = new topTracker.GetCurrencies()
+const parameters = {}
+const input = {}
 
-/* Make request */
-const request = instance.call()
-
-/* Get result */
-request.then((output) => {
-    /* output */
-})
+new GetCurrencies(parameters)
+    .call(input)
+    .then((output) => {})
+    .catch((error) => {})
 ```
 
+-   **Parameters**
 
-#### Input
+```json
+/* whitout parameters */
+```
+
+-   **Input**
 
 ```js
-instance.call(input)
+new GetCurrencies().call(input)
 ```
 
 ```json
@@ -35,11 +35,10 @@ instance.call(input)
 }
 ```
 
-
-#### Output
+-   **Output**
 
 ```js
-request.then((output) => {})
+new GetCurrencies().call().then((output) => {})
 ```
 
 ```json

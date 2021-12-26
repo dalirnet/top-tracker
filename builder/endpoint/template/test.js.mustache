@@ -1,11 +1,21 @@
-# Top tracker
+import _ from 'lodash'
+import { {{class}} } from '../../index.js'
 
-JavaScript client for **[Toptal](https://www.toptal.com/)** [tracker](https://www.toptal.com/tracker)
+beforeAll(() => {
+    return MEMO.req(new {{class}}())
+        .call()
+        .then(({{endpoint}}) => {
+            MEMO.set({{endpoint}})
+        })
+        .catch(({ payload }) => {
+            console.log(payload)
+        })
+})
 
-{{> install}}
+test('output match', () => {
+    expect({{class}}.outputMatch(MEMO.get())).toBeTruthy()
+})
 
-{{> import}}
-
-{{> sample}}
-
-{{> endpoints}}
+afterAll(() => {
+    MEMO.save()
+})

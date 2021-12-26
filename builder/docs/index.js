@@ -1,5 +1,6 @@
 import _ from 'lodash'
 import fs from 'fs-extra'
+import figures from 'figures'
 import mustache from 'mustache'
 import * as topTracker from '../../index.js'
 
@@ -22,6 +23,7 @@ const mustachePartials = {
 const saveDocFile = (path, context) => {
     fs.ensureFileSync(path)
     fs.writeFileSync(path, _.replace(context, /[\r\n]{3,}/g, '\n\n'))
+    console.log(figures.tick, 'Build', path)
 }
 
 const initView = (value, key) => {
@@ -76,3 +78,5 @@ saveDocFile(
         mustachePartials
     )
 )
+
+console.log(figures.tick, 'Done')

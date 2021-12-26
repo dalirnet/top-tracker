@@ -1,11 +1,11 @@
-{{> title}}
+import Api from '../lib/Api.js'
 
-{{> sample}}
+class {{class}} extends Api {
+    static METHOD = '{{method}}'
+    static ENDPOINT = '/{{endpoint}}'
+    static DESC = '{{class}} ...'
+    static INPUT = {}
+    static OUTPUT = {}
+}
 
-{{> parameters}}
-
-{{> input}}
-
-{{> output}}
-
-console.log('dd')
+export default {{class}}

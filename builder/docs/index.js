@@ -1,12 +1,13 @@
 import _ from 'lodash'
 import fs from 'fs-extra'
 import mustache from 'mustache'
-import topTracker from '../../index.js'
+import * as topTracker from '../../index.js'
 
 const mustacheTemplate = {
     main: _.toString(fs.readFileSync('./builder/docs/template/main.md')),
     endpoint: _.toString(fs.readFileSync('./builder/docs/template/endpoint.md')),
 }
+
 const mustachePartials = {
     title: _.toString(fs.readFileSync('./builder/docs/template/_title.md')),
     sample: _.toString(fs.readFileSync('./builder/docs/template/_sample.md')),

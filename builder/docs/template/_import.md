@@ -1,5 +1,5 @@
 #### Import
 
 ```js
-import topTracker from 'top-tracker'
+import * as topTracker from 'top-tracker'
 ```

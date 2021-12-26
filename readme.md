@@ -11,7 +11,7 @@ npm install top-tracker
 #### Import
 
 ```js
-import topTracker from 'top-tracker'
+import * as topTracker from 'top-tracker'
 ```
 
 #### Sample
@@ -34,13 +34,11 @@ new SignIn(parameters)
 
 -   [Currencies](./docs/Currencies/readme.md)
 
--   [TimeZones](./docs/TimeZones/readme.md)
-
 -   [SignIn](./docs/SignIn/readme.md)
 
 -   [SignUp](./docs/SignUp/readme.md)
 
--   UsersLocation `todo`
+-   [TimeZones](./docs/TimeZones/readme.md)
 
 -   Invitation `todo`
 
@@ -49,4 +47,6 @@ new SignIn(parameters)
 -   InvoiceDetails `todo`
 
 -   InvoiceSummary `todo`
+
+-   UsersLocation `todo`
 

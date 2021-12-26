@@ -15,9 +15,6 @@ beforeAll(() => {
         .then((session) => {
             MEMO.set(session)
         })
-        .catch((payload) => {
-            console.log(payload)
-        })
 })
 
 test('output match', () => {

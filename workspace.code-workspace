@@ -1,24 +1,24 @@
 {
     "folders": [
         {
-            "path": "lib",
+            "path": "src/lib",
             "name": "Lib"
         },
         {
-            "path": "endpoints",
+            "path": "src/endpoints",
             "name": "Endpoints"
         },
         {
-            "path": "test",
+            "path": "test/endpoints",
             "name": "Test"
+        },
+        {
+            "path": "test/.memo",
+            "name": "Memo"
         },
         {
             "path": "docs",
             "name": "Docs"
-        },
-        {
-            "path": "test/memo",
-            "name": "Memo"
         },
         {
             "path": ".",

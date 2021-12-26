@@ -1,12 +1,12 @@
-import Countries from './endpoints/Countries.js'
-import Currencies from './endpoints/Currencies.js'
-import TimeZones from './endpoints/TimeZones.js'
-import UsersLocation from './endpoints/UsersLocation.js'
-import Invitation from './endpoints/Invitation.js'
-import InvoiceConfirm from './endpoints/InvoiceConfirm.js'
-import InvoiceDetails from './endpoints/InvoiceDetails.js'
-import InvoiceSummary from './endpoints/InvoiceDetails.js'
-import Login from './endpoints/Login.js'
+import Countries from './src/endpoints/Countries.js'
+import Currencies from './src/endpoints/Currencies.js'
+import TimeZones from './src/endpoints/TimeZones.js'
+import UsersLocation from './src/endpoints/UsersLocation.js'
+import Invitation from './src/endpoints/Invitation.js'
+import InvoiceConfirm from './src/endpoints/InvoiceConfirm.js'
+import InvoiceDetails from './src/endpoints/InvoiceDetails.js'
+import InvoiceSummary from './src/endpoints/InvoiceDetails.js'
+import Login from './src/endpoints/Login.js'
 
 export { Countries, Currencies, TimeZones, UsersLocation, Invitation, InvoiceConfirm, InvoiceDetails, InvoiceSummary, Login }
 

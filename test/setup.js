@@ -11,7 +11,7 @@ const memo = {
 }
 
 const endpointPath = (endpoint) => {
-    return `./test/memo/${_.trim(endpoint, '/')}.memo.json`
+    return `./test/.memo/${_.trim(endpoint, '/')}.memo.json`
 }
 
 const init = (endpoint, fallback) => {

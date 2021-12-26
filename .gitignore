@@ -27,6 +27,7 @@ node_modules/
 # dotenv environment variables file
 .env
 
-# Keep test data
+# Memo test data
+.memo/
 *.memo.json
 

@@ -1,4 +1,4 @@
-import ApiError from '../../lib/ApiError.js'
+import ApiError from '../../src/lib/ApiError.js'
 
 test('throw AbstractError', () => {
     expect(() => {
@@ -17,6 +17,6 @@ test('throw MissingEndpointParameterError', () => {
 })
 test('throw MalformedRequestError', () => {
     expect(() => {
-        throw new ApiError.malformedRequest({ message: 'test' })
-    }).toThrow("Malformed request. 'test'")
+        throw new ApiError.malformedRequest({ status: '500', message: 'Internal error' })
+    }).toThrow("Malformed request. '500' 'Internal error'")
 })

@@ -1,4 +1,4 @@
-import Api from '../../lib/Api.js'
+import Api from '../../src/lib/Api.js'
 
 test('extract endpoint parameters', () => {
     const parameters = Api.extractEndpointParameters('/endpoint/:path/:other_path')
@@ -39,6 +39,6 @@ test('throw MissingEndpointParameterError', () => {
 })
 test('throw MalformedRequestError', () => {
     return new Api('GET', '/malforemd/request').call().catch(({ message }) => {
-        expect(message).toBe("Malformed request. 'Not Found'")
+        expect(message).toBe("Malformed request. '404' 'Not Found'")
     })
 })

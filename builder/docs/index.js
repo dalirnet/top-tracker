@@ -70,7 +70,7 @@ saveDocFile(
         mustacheTemplate.main,
         {
             endpoints,
-            ..._.find(endpoints, ['class', 'GetCountries']),
+            ..._.find(endpoints, ['class', 'Login']),
         },
         mustachePartials
     )

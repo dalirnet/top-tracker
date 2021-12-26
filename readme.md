@@ -17,12 +17,12 @@ import topTracker from 'top-tracker'
 #### Sample
 
 ```js
-import {  } from 'top-tracker'
+import { Login } from 'top-tracker'
 
 const parameters = {}
 const input = {}
 
-new (parameters)
+new Login(parameters)
     .call(input)
     .then((output) => {})
     .catch(({ message, payload }) => {})

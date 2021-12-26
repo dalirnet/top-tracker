@@ -1,6 +1,6 @@
 {
     "name": "top-tracker",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "JavaScript client for Toptal tracker",
     "main": "index.js",
     "repository": "https://github.com/dalirnet/top-tracker.git",
@@ -21,5 +21,10 @@
         "fs-extra": "^10.0.0",
         "jest": "^27.4.5",
         "mustache": "^4.2.0"
-    }
+    },
+    "keywords": [
+        "api",
+        "toptal",
+        "top-tracker"
+    ]
 }

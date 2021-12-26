@@ -13,7 +13,7 @@ const input = {}
 new TimeZones(parameters)
     .call(input)
     .then((output) => {})
-    .catch((error) => {})
+    .catch(({ message, payload }) => {})
 ```
 
 -   **Parameters**

@@ -9,5 +9,5 @@ const input = {}
 new {{class}}(parameters)
     .call(input)
     .then((output) => {})
-    .catch((error) => {})
+    .catch(({ message, payload }) => {})
 ```

@@ -25,7 +25,7 @@ const input = {}
 new (parameters)
     .call(input)
     .then((output) => {})
-    .catch((error) => {})
+    .catch(({ message, payload }) => {})
 ```
 
 ### Endpoints
@@ -35,6 +35,8 @@ new (parameters)
 -   [Currencies](./docs/Currencies/readme.md)
 
 -   [TimeZones](./docs/TimeZones/readme.md)
+
+-   [Login](./docs/Login/readme.md)
 
 -   UsersLocation `todo`
 

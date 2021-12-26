@@ -1,4 +1,8 @@
+import _ from 'lodash'
 import fs from 'fs-extra'
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 const memo = {
     method: undefined,
@@ -6,8 +10,16 @@ const memo = {
     output: undefined,
 }
 
-const path = () => {
-    return `./test/memo/${memo.endpoint}.memo.json`
+const endpointPath = (endpoint) => {
+    return `./test/memo/${_.trim(endpoint, '/')}.memo.json`
+}
+
+const init = (endpoint, fallback) => {
+    if (fs.pathExistsSync(endpointPath(endpoint))) {
+        return fs.readJSONSync(endpointPath(endpoint))
+    }
+
+    return fallback
 }
 
 const req = (req) => {
@@ -26,11 +38,15 @@ const get = () => {
 }
 
 const save = () => {
-    fs.ensureFile(path()).then(() => {
-        fs.writeJson(path(), memo.output, { spaces: 4 }).catch(({ message }) => {
-            console.log(message)
-        })
-    })
+    if (memo.output) {
+        fs.ensureFile(endpointPath(memo.endpoint))
+            .then(() => {
+                return fs.writeJson(endpointPath(memo.endpoint), memo.output, { spaces: 4 })
+            })
+            .catch(({ message }) => {
+                console.log(message)
+            })
+    }
 }
 
-global.MEMO = { req, set, save, get }
+global.MEMO = { init, req, set, save, get }

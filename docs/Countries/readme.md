@@ -13,7 +13,7 @@ const input = {}
 new Countries(parameters)
     .call(input)
     .then((output) => {})
-    .catch((error) => {})
+    .catch(({ message, payload }) => {})
 ```
 
 -   **Parameters**

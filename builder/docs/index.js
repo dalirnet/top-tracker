@@ -4,19 +4,19 @@ import mustache from 'mustache'
 import * as topTracker from '../../index.js'
 
 const mustacheTemplate = {
-    main: _.toString(fs.readFileSync('./builder/docs/template/main.md')),
-    endpoint: _.toString(fs.readFileSync('./builder/docs/template/endpoint.md')),
+    main: _.toString(fs.readFileSync('./builder/docs/template/main.md.mustache')),
+    endpoint: _.toString(fs.readFileSync('./builder/docs/template/endpoint.md.mustache')),
 }
 
 const mustachePartials = {
-    title: _.toString(fs.readFileSync('./builder/docs/template/_title.md')),
-    sample: _.toString(fs.readFileSync('./builder/docs/template/_sample.md')),
-    parameters: _.toString(fs.readFileSync('./builder/docs/template/_parameters.md')),
-    input: _.toString(fs.readFileSync('./builder/docs/template/_input.md')),
-    output: _.toString(fs.readFileSync('./builder/docs/template/_output.md')),
-    install: _.toString(fs.readFileSync('./builder/docs/template/_install.md')),
-    import: _.toString(fs.readFileSync('./builder/docs/template/_import.md')),
-    endpoints: _.toString(fs.readFileSync('./builder/docs/template/_endpoints.md')),
+    title: _.toString(fs.readFileSync('./builder/docs/template/_title.md.mustache')),
+    sample: _.toString(fs.readFileSync('./builder/docs/template/_sample.md.mustache')),
+    parameters: _.toString(fs.readFileSync('./builder/docs/template/_parameters.md.mustache')),
+    input: _.toString(fs.readFileSync('./builder/docs/template/_input.md.mustache')),
+    output: _.toString(fs.readFileSync('./builder/docs/template/_output.md.mustache')),
+    install: _.toString(fs.readFileSync('./builder/docs/template/_install.md.mustache')),
+    import: _.toString(fs.readFileSync('./builder/docs/template/_import.md.mustache')),
+    endpoints: _.toString(fs.readFileSync('./builder/docs/template/_endpoints.md.mustache')),
 }
 
 const saveDocFile = (path, context) => {

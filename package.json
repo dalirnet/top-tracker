@@ -19,6 +19,7 @@
         "@babel/plugin-transform-modules-commonjs": "^7.16.5",
         "casual": "^1.6.2",
         "dotenv": "^10.0.0",
+        "eslint": "^8.5.0",
         "fs-extra": "^10.0.0",
         "jest": "^27.4.5",
         "mustache": "^4.2.0"

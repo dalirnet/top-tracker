@@ -29,6 +29,12 @@
         "files.exclude": {
             "**/.git": true,
             "**/node_modules": true
-        }
+        },
+        "files.associations": {
+            "*.md.mustache": "markdown",
+            "*.js.mustache": "javascript"
+        },
+        "editor.formatOnSave": true,
+        "javascript.validate.enable": false
     }
 }

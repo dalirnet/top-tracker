@@ -2,6 +2,8 @@ import _ from 'lodash'
 import Superagent from 'superagent'
 import ApiError from './ApiError.js'
 
+_.mixin({ isTrue: (value) => value === true })
+_.mixin({ isFalse: (value) => value === false })
 _.mixin({ isAny: () => true })
 
 class Api {
@@ -107,10 +109,10 @@ class Api {
         )
     }
 
-    call(body = {}) {
+    call(input = {}) {
         return new Promise((resolve, reject) => {
             return Superagent[this.method](this.endpointUrl)
-                [this.methodBodyFunction](body)
+                [this.methodBodyFunction](input)
                 .accept('json')
                 .then((response) => {
                     if (response.type === 'application/octet-stream') {

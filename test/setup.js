@@ -10,13 +10,13 @@ const memo = {
     output: undefined,
 }
 
-const endpointPath = (endpoint) => {
-    return `./test/.memo/${_.trim(endpoint, '/')}.memo.json`
+const endpointPath = (method, endpoint) => {
+    return `./test/.memo/${method}/${_.trim(endpoint, '/')}.memo.json`
 }
 
-const init = (endpoint, fallback) => {
-    if (fs.pathExistsSync(endpointPath(endpoint))) {
-        return fs.readJSONSync(endpointPath(endpoint))
+const init = (method, endpoint, fallback) => {
+    if (fs.pathExistsSync(endpointPath(method, endpoint))) {
+        return fs.readJSONSync(endpointPath(method, endpoint))
     }
 
     return fallback
@@ -39,9 +39,9 @@ const get = () => {
 
 const save = () => {
     if (memo.output) {
-        fs.ensureFile(endpointPath(memo.endpoint))
+        fs.ensureFile(endpointPath(memo.method, memo.endpoint))
             .then(() => {
-                return fs.writeJson(endpointPath(memo.endpoint), memo.output, { spaces: 4 })
+                return fs.writeJson(endpointPath(memo.method, memo.endpoint), memo.output, { spaces: 4 })
             })
             .catch(({ message }) => {
                 console.log(message)

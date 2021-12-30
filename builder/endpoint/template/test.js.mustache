@@ -4,11 +4,11 @@ import { {{class}} } from '../../index.js'
 beforeAll(() => {
     return MEMO.req(new {{class}}())
         .call()
-        .then(({{endpoint}}) => {
-            MEMO.set({{endpoint}})
+        .then((output) => {
+            MEMO.set(output)
         })
-        .catch(({ payload }) => {
-            console.log(payload)
+        .catch(({ message, payload }) => {
+            console.log(message, payload)
         })
 })
 

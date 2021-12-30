@@ -4,7 +4,7 @@ import figures from 'figures'
 import mustache from 'mustache'
 import * as topTracker from '../../index.js'
 
-const endpoint = _.toLower(_.trim(_.get(process.argv, 2)))
+const endpoint = _.lowerCase(_.trim(_.get(process.argv, 2)))
 const endpoints = _.map(_.keys(topTracker), _.toLower)
 
 if (!endpoint || _.includes(endpoints, endpoint)) {
@@ -13,9 +13,9 @@ if (!endpoint || _.includes(endpoints, endpoint)) {
 }
 
 const mustacheView = {
-    endpoint,
+    endpoint: _.snakeCase(endpoint),
     class: _.upperFirst(_.camelCase(endpoint)),
-    method: _.toUpper(_.trim(_.get(process.argv, 4, 'GET'))),
+    method: _.toUpper(_.trim(_.get(process.argv, 3, 'GET'))),
 }
 
 const mustacheTemplate = {

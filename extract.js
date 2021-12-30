@@ -1,7 +1,6 @@
 // post
 
 // signedDelete
-signedDelete('/sessions/me')
 signedDelete(`/activities/images/${id}`)
 signedDelete(`/invitations/${invitation_id}`)
 signedDelete(`/notifications/${id}`)

@@ -36,6 +36,8 @@ new SignIn(parameters)
 
 -   [SignIn](./docs/SignIn/readme.md)
 
+-   [SignOut](./docs/SignOut/readme.md)
+
 -   [SignUp](./docs/SignUp/readme.md)
 
 -   [TimeZones](./docs/TimeZones/readme.md)

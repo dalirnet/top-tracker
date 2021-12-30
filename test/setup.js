@@ -11,7 +11,7 @@ const memo = {
 }
 
 const endpointPath = (method, endpoint) => {
-    return `./test/.memo/${method}/${_.trim(endpoint, '/')}.memo.json`
+    return `./test/.memo/${_.toLower(method)}/${_.trim(endpoint, '/')}.memo.json`
 }
 
 const readable = (method, endpoint, fallback) => {

@@ -14,7 +14,7 @@ const endpointPath = (method, endpoint) => {
     return `./test/.memo/${method}/${_.trim(endpoint, '/')}.memo.json`
 }
 
-const init = (method, endpoint, fallback) => {
+const readable = (method, endpoint, fallback) => {
     if (fs.pathExistsSync(endpointPath(method, endpoint))) {
         return fs.readJSONSync(endpointPath(method, endpoint))
     }
@@ -22,9 +22,9 @@ const init = (method, endpoint, fallback) => {
     return fallback
 }
 
-const req = (req) => {
+const writable = (req) => {
     memo.method = req.method
-    memo.endpoint = req.endpoint
+    memo.endpoint = req.constructor.ENDPOINT
 
     return req
 }
@@ -49,4 +49,4 @@ const save = () => {
     }
 }
 
-global.MEMO = { init, req, set, save, get }
+global.MEMO = { readable, writable, set, save, get }

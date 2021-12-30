@@ -1,12 +1,6 @@
 // post
 
 // signedDelete
-signedDelete(`/activities/images/${id}`)
-signedDelete(`/invitations/${invitation_id}`)
-signedDelete(`/notifications/${id}`)
-signedDelete(`/payments/invoices/${invoice_id}`)
-signedDelete(`/projects/${id}`)
-signedDelete(`/users/${id}`)
 
 // signedGet
 signedGet('/activities/my', {

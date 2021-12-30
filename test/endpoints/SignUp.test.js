@@ -3,7 +3,7 @@ import casual from 'casual'
 import { SignUp } from '../../index.js'
 
 beforeAll(() => {
-    return MEMO.req(new SignUp())
+    return MEMO.writable(new SignUp())
         .call({
             first_name: casual.first_name,
             last_name: casual.last_name,

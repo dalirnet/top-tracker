@@ -2,7 +2,7 @@ import _ from 'lodash'
 import { Currencies } from '../../index.js'
 
 beforeAll(() => {
-    return MEMO.req(new Currencies())
+    return MEMO.writable(new Currencies())
         .call()
         .then((currencies) => {
             MEMO.set(currencies)

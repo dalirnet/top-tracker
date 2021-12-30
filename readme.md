@@ -40,6 +40,8 @@ new SignIn(parameters)
 
 -   [SignUp](./docs/SignUp/readme.md)
 
+-   [TerminateAccount](./docs/TerminateAccount/readme.md)
+
 -   [TimeZones](./docs/TimeZones/readme.md)
 
 -   Invitation `todo`
@@ -49,6 +51,16 @@ new SignIn(parameters)
 -   InvoiceDetails `todo`
 
 -   InvoiceSummary `todo`
+
+-   RemoveActivityImage `todo`
+
+-   RemoveInvitation `todo`
+
+-   RemoveInvoice `todo`
+
+-   RemoveNotification `todo`
+
+-   RemoveProject `todo`
 
 -   UsersLocation `todo`
 

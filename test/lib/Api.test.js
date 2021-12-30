@@ -1,14 +1,14 @@
 import Api from '../../src/lib/Api.js'
 
 test('extract endpoint parameters', () => {
-    const parameters = Api.extractEndpointParameters('/endpoint/:path/:other_path')
+    const parameters = Api.extractEndpointParameters('/endpoint/$path/$other_path')
     expect(parameters).toMatchObject({
-        ':path': 'path',
-        ':other_path': 'otherPath',
+        $path: 'path',
+        $other_path: 'otherPath',
     })
 })
 test('init endpoint parameters', () => {
-    const endpoint = '/endpoint/:path/:other_path'
+    const endpoint = '/endpoint/$path/$other_path'
     const finalEndpoint = '/endpoint/valueOfPath/valueOfOtherPath'
     const testOne = new Api().initEndpoint(endpoint, {
         path: 'valueOfPath',
@@ -31,7 +31,7 @@ test('throw InvalidHTTPMethodError', () => {
 })
 test('throw MissingEndpointParameterError', () => {
     class TestApi extends Api {
-        static ENDPOINT = '/endpoint/:id'
+        static ENDPOINT = '/endpoint/$id'
     }
     expect(() => {
         new TestApi()

@@ -2,7 +2,7 @@ import _ from 'lodash'
 import { Countries } from '../../index.js'
 
 beforeAll(() => {
-    return MEMO.req(new Countries())
+    return MEMO.writable(new Countries())
         .call()
         .then((countries) => {
             MEMO.set(countries)

@@ -2,7 +2,7 @@ import _ from 'lodash'
 import { {{class}} } from '../../index.js'
 
 beforeAll(() => {
-    return MEMO.req(new {{class}}())
+    return MEMO.writable(new {{class}}())
         .call()
         .then((output) => {
             MEMO.set(output)

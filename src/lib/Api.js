@@ -76,11 +76,11 @@ class Api {
 
     static extractEndpointParameters(endpoint) {
         return _.reduce(
-            _.sortBy(endpoint.match(/:([^/:]*)/g), (parameter) => {
+            _.sortBy(endpoint.match(/\$([^/$]*)/g), (parameter) => {
                 return parameter.length * -1
             }),
             (parameters, parameter) => {
-                return _.set(parameters, parameter, _.camelCase(_.trim(parameter, ':')))
+                return _.set(parameters, parameter, _.camelCase(_.trim(parameter, '$')))
             },
             {}
         )

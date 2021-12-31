@@ -2,9 +2,17 @@ import _ from 'lodash'
 import Superagent from 'superagent'
 import { InvalidHTTPMethodError, MissingEndpointParameterError, MalformedRequestError } from './ApiError.js'
 
-_.mixin({ isTrue: (value) => value === true })
-_.mixin({ isFalse: (value) => value === false })
-_.mixin({ isAny: () => true })
+_.mixin({
+    isISODate(value) {
+        return Date.parse(value) > 0
+    },
+    isTrue(value) {
+        return value === true
+    },
+    isFalse(value) {
+        return value === false
+    },
+})
 
 class Api {
     static TODO = false
@@ -56,8 +64,9 @@ class Api {
     }
 
     static outputMatch(output = {}) {
-        if (!_[this.outputRootType()](output)) {
-            return false
+        const type = this.outputRootType()
+        if (!_[type](output)) {
+            return [{ type, output }]
         }
 
         const flatten = {
@@ -66,12 +75,28 @@ class Api {
         }
 
         if (_.isObjectLike(flatten.subject)) {
-            return _.every(flatten.subject, (type, key) => {
-                return _[type](_.get(flatten.target, key))
-            })
+            const unequal = _.reduce(
+                flatten.subject,
+                (unequal, type, key) => {
+                    const output = _.get(flatten.target, key, key.match(/\..*\./) ? null : undefined)
+                    if (!_[type](output) && !_.isNull(output)) {
+                        unequal.push({ key, type, output })
+                    }
+
+                    return unequal
+                },
+                []
+            )
+            if (!_.isEmpty(unequal)) {
+                return unequal
+            }
+        } else {
+            if (!_[flatten.subject](flatten.target)) {
+                return [{ type: flatten.subject, output: flatten.target }]
+            }
         }
 
-        return _[flatten.subject](flatten.target)
+        return true
     }
 
     static extractEndpointParameters(endpoint) {
@@ -113,7 +138,6 @@ class Api {
         return new Promise((resolve, reject) => {
             return Superagent[this.method](this.endpointUrl)
                 [this.methodBodyFunction](input)
-                .accept('json')
                 .then((response) => {
                     if (response.type === 'application/octet-stream') {
                         const buffers = []
@@ -124,8 +148,10 @@ class Api {
                             .on('end', () => {
                                 resolve(JSON.parse(Buffer.concat(buffers)))
                             })
-                    } else {
+                    } else if (response.type === 'application/json') {
                         resolve(response.body)
+                    } else {
+                        resolve(JSON.parse(response.text))
                     }
                 })
                 .catch(({ status, message, response = {} }) => {

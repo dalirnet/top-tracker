@@ -18,7 +18,7 @@ beforeAll(() => {
 })
 
 test('output match', () => {
-    expect(SignUp.outputMatch(MEMO.get())).toBeTruthy()
+    expect(SignUp.outputMatch(MEMO.get())).toBe(true)
 })
 
 afterAll(() => {

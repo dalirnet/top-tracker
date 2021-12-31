@@ -10,15 +10,7 @@ beforeAll(() => {
 })
 
 test('output match', () => {
-    expect(Countries.outputMatch(MEMO.get())).toBeTruthy()
-})
-
-test('country by id 1', () => {
-    const country = _.find(MEMO.get(), ['id', 1])
-    expect(country).toMatchObject({
-        id: 1,
-        name: 'Afghanistan',
-    })
+    expect(Countries.outputMatch(MEMO.get())).toBe(true)
 })
 
 afterAll(() => {

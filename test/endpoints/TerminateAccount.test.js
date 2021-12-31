@@ -17,7 +17,7 @@ beforeAll(() => {
 })
 
 test('output match', () => {
-    expect(TerminateAccount.outputMatch(MEMO.get())).toBeTruthy()
+    expect(TerminateAccount.outputMatch(MEMO.get())).toBe(true)
 })
 
 afterAll(() => {

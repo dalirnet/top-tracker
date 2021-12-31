@@ -10,15 +10,7 @@ beforeAll(() => {
 })
 
 test('output match', () => {
-    expect(TimeZones.outputMatch(MEMO.get())).toBeTruthy()
-})
-
-test('timezone by value Pacific/Kiritimati', () => {
-    const timezone = _.find(MEMO.get(), ['value', 'Pacific/Kiritimati'])
-    expect(timezone).toMatchObject({
-        value: 'Pacific/Kiritimati',
-        label: '(+14:00) Pacific - Kiritimati',
-    })
+    expect(TimeZones.outputMatch(MEMO.get())).toBe(true)
 })
 
 afterAll(() => {

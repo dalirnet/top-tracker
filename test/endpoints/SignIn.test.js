@@ -13,7 +13,7 @@ beforeAll(() => {
 })
 
 test('output match', () => {
-    expect(SignIn.outputMatch(MEMO.get())).toBeTruthy()
+    expect(SignIn.outputMatch(MEMO.get())).toBe(true)
 })
 
 afterAll(() => {

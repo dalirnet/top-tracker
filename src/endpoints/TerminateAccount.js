@@ -1,4 +1,5 @@
 import Api from '../lib/Api.js'
+import { UserInterface } from '../lib/ApiInterface.js'
 
 class TerminateAccount extends Api {
     static METHOD = 'DELETE'
@@ -8,25 +9,7 @@ class TerminateAccount extends Api {
         access_token: 'isString',
     }
     static OUTPUT = {
-        user: {
-            id: 'isNumber',
-            email: 'isString',
-            name: 'isString',
-            time_zone: 'isString',
-            avatar_url: 'isString',
-            company_name: 'isAny',
-            invoice_due_period: 'isNumber',
-            address: 'isAny',
-            phone: 'isAny',
-            currency: 'isAny',
-            used_desktop: 'isBoolean',
-            has_invoices: 'isBoolean',
-            first_name: 'isAny',
-            middle_name: 'isAny',
-            last_name: 'isAny',
-            city: 'isAny',
-            country_id: 'isNumber',
-        },
+        user: UserInterface,
     }
 }
 

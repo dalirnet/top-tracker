@@ -11,14 +11,9 @@ class SignOut extends Api {
     static OUTPUT = 'isTrue'
 
     call(input) {
-        return super
-            .call(input)
-            .then((output) => {
-                return _.isEmpty(output)
-            })
-            .catch(() => {
-                return false
-            })
+        return super.call(input).then((output) => {
+            return _.isEmpty(output)
+        })
     }
 }
 

@@ -9,11 +9,4 @@ export default {
     address: 'isString',
     phone: 'isString',
     currency: 'isString',
-    used_desktop: 'isBoolean',
-    has_invoices: 'isBoolean',
-    first_name: 'isString',
-    middle_name: 'isString',
-    last_name: 'isString',
-    city: 'isString',
-    country_id: 'isNumber',
 }

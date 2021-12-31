@@ -1,2 +1,7 @@
 export { default as UserInterface } from './interface/UserInterface.js'
+export { default as SimplifiedUserInterface } from './interface/SimplifiedUserInterface.js'
 export { default as ProfileInterface } from './interface/ProfileInterface.js'
+export { default as SimplifiedProfileInterface } from './interface/SimplifiedProfileInterface.js'
+export { default as ProjectInterface } from './interface/ProjectInterface.js'
+export { default as ProjectBudgetInterface } from './interface/ProjectBudgetInterface.js'
+export { default as TrackingRequirementsInterface } from './interface/TrackingRequirementsInterface.js'

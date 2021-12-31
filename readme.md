@@ -34,6 +34,10 @@ new SignIn(parameters)
 
 -   [Currencies](./docs/Currencies/readme.md)
 
+-   [MyActivities](./docs/MyActivities/readme.md)
+
+-   [Projects](./docs/Projects/readme.md)
+
 -   [SignIn](./docs/SignIn/readme.md)
 
 -   [SignOut](./docs/SignOut/readme.md)

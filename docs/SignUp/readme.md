@@ -49,17 +49,17 @@ new SignUp(parameters)
         "name": "isString",
         "time_zone": "isString",
         "avatar_url": "isString",
-        "company_name": "isAny",
+        "company_name": "isString",
         "invoice_due_period": "isNumber",
-        "address": "isAny",
-        "phone": "isAny",
-        "currency": "isAny",
+        "address": "isString",
+        "phone": "isString",
+        "currency": "isString",
         "used_desktop": "isBoolean",
         "has_invoices": "isBoolean",
-        "first_name": "isAny",
-        "middle_name": "isAny",
-        "last_name": "isAny",
-        "city": "isAny",
+        "first_name": "isString",
+        "middle_name": "isString",
+        "last_name": "isString",
+        "city": "isString",
         "country_id": "isNumber"
     },
     "profiles": [
@@ -68,9 +68,9 @@ new SignUp(parameters)
             "type": "isString",
             "name": "isString",
             "avatar_url": "isString",
-            "company_name": "isAny",
-            "address": "isAny",
-            "phone": "isAny",
+            "company_name": "isString",
+            "address": "isString",
+            "phone": "isString",
             "active": "isBoolean"
         }
     ]

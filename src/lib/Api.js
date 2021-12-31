@@ -78,7 +78,7 @@ class Api {
             const unequal = _.reduce(
                 flatten.subject,
                 (unequal, type, key) => {
-                    const output = _.get(flatten.target, key, key.match(/\..*\./) ? null : undefined)
+                    const output = _.get(flatten.target, key, _.includes(key, '.') ? null : undefined)
                     if (!_[type](output) && !_.isNull(output)) {
                         unequal.push({ key, type, output })
                     }
@@ -155,7 +155,14 @@ class Api {
                     }
                 })
                 .catch(({ status, message, response = {} }) => {
-                    reject(new MalformedRequestError({ status, message, payload: _.get(response, 'body.errors') }))
+                    reject(
+                        new MalformedRequestError({
+                            status,
+                            message,
+                            url: _.get(response, 'request.url'),
+                            payload: _.get(response, 'body.errors'),
+                        })
+                    )
                 })
         })
     }

@@ -5,3 +5,6 @@ export { default as SimplifiedProfileInterface } from './interface/SimplifiedPro
 export { default as ProjectInterface } from './interface/ProjectInterface.js'
 export { default as ProjectBudgetInterface } from './interface/ProjectBudgetInterface.js'
 export { default as TrackingRequirementsInterface } from './interface/TrackingRequirementsInterface.js'
+export { default as ActivityInterface } from './interface/ActivityInterface.js'
+export { default as ShotInterface } from './interface/ShotInterface.js'
+export { default as SimplifiedShotInterface } from './interface/SimplifiedShotInterface.js'

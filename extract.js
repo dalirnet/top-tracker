@@ -84,10 +84,6 @@ signedGet('/web/projects_lite', {
     archived: 'boolean',
 })
 
-signedGet('/web/projects', {
-    archived: 'boolean',
-})
-
 signedGet('/web/web_tracker')
 signedGet(`/activities/${id}`)
 signedGet(`/payments/invoices/${invoice_id}`)

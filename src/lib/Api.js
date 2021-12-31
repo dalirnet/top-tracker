@@ -1,6 +1,6 @@
 import _ from 'lodash'
 import Superagent from 'superagent'
-import ApiError from './ApiError.js'
+import { InvalidHTTPMethodError, MissingEndpointParameterError, MalformedRequestError } from './ApiError.js'
 
 _.mixin({ isTrue: (value) => value === true })
 _.mixin({ isFalse: (value) => value === false })
@@ -91,7 +91,7 @@ class Api {
             return _.toLower(method)
         }
 
-        throw new ApiError.invalidHTTPMethod({ method })
+        throw new InvalidHTTPMethodError({ method })
     }
 
     initEndpoint(endpoint, parameters = {}) {
@@ -103,7 +103,7 @@ class Api {
                     return _.replace(keepRawEndpoint, match, parameter)
                 }
 
-                throw new ApiError.missingEndpointParameter({ parameter: key })
+                throw new MissingEndpointParameterError({ parameter: key })
             },
             endpoint
         )
@@ -129,7 +129,7 @@ class Api {
                     }
                 })
                 .catch(({ status, message, response = {} }) => {
-                    reject(new ApiError.malformedRequest({ status, message, payload: _.get(response, 'body.errors') }))
+                    reject(new MalformedRequestError({ status, message, payload: _.get(response, 'body.errors') }))
                 })
         })
     }
